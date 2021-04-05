@@ -18,66 +18,66 @@ import androidx.recyclerview.widget.RecyclerView
  * @author Ritwik Jamuar
  */
 abstract class BaseViewHolder<ViewAccessor>(
-        protected val viewAccessor: ViewAccessor,
-        view: View
+    protected val viewAccessor: ViewAccessor,
+    view: View
 ) : RecyclerView.ViewHolder(view), LifecycleOwner {
 
-    /*---------------------------------------- Components ----------------------------------------*/
+	/*---------------------------------------- Components ----------------------------------------*/
 
-    /**
-     * Reference of [LifecycleRegistry] to control the Lifecycle of this [BaseViewHolder].
-     */
-    private val lifecycleRegistry: LifecycleRegistry by lazy {
-        LifecycleRegistry(this)
-    }
+	/**
+	 * Reference of [LifecycleRegistry] to control the Lifecycle of this [BaseViewHolder].
+	 */
+	private val lifecycleRegistry: LifecycleRegistry by lazy {
+		LifecycleRegistry(this)
+	}
 
-    /*------------------------------------ Initializer Block -------------------------------------*/
+	/*------------------------------------ Initializer Block -------------------------------------*/
 
-    init {
-        initialize()
-    }
+	init {
+		initialize()
+	}
 
-    /*----------------------------------- Lifecycle Callbacks ------------------------------------*/
+	/*----------------------------------- Lifecycle Callbacks ------------------------------------*/
 
-    override fun getLifecycle(): Lifecycle = lifecycleRegistry
+	override fun getLifecycle(): Lifecycle = lifecycleRegistry
 
-    /*-------------------------------------- Public Methods --------------------------------------*/
+	/*-------------------------------------- Public Methods --------------------------------------*/
 
-    /**
-     * Notifies that this [BaseViewHolder] is attached to the Window.
-     */
-    fun markAttach() {
-        lifecycleRegistry.currentState = Lifecycle.State.STARTED
-        initializeComponents()
-    }
+	/**
+	 * Notifies that this [BaseViewHolder] is attached to the Window.
+	 */
+	fun markAttach() {
+		lifecycleRegistry.currentState = Lifecycle.State.STARTED
+		initializeComponents()
+	}
 
-    /**
-     * Notifies that this [BaseViewHolder] is detached from the Window.
-     */
-    fun markDetach() {
-        lifecycleRegistry.currentState = Lifecycle.State.DESTROYED
-        cleanUp()
-    }
+	/**
+	 * Notifies that this [BaseViewHolder] is detached from the Window.
+	 */
+	fun markDetach() {
+		lifecycleRegistry.currentState = Lifecycle.State.DESTROYED
+		cleanUp()
+	}
 
-    /*-------------------------------------- Private Methods -------------------------------------*/
+	/*-------------------------------------- Private Methods -------------------------------------*/
 
-    /**
-     * Initializes components of this [BaseViewHolder].
-     */
-    private fun initialize() {
-        lifecycleRegistry.currentState = Lifecycle.State.CREATED
-    }
+	/**
+	 * Initializes components of this [BaseViewHolder].
+	 */
+	private fun initialize() {
+		lifecycleRegistry.currentState = Lifecycle.State.CREATED
+	}
 
-    /*------------------------------------- Abstract Methods -------------------------------------*/
+	/*------------------------------------- Abstract Methods -------------------------------------*/
 
-    /**
-     * Tells this [BaseViewHolder] to initialize it's components.
-     */
-    protected abstract fun initializeComponents()
+	/**
+	 * Tells this [BaseViewHolder] to initialize it's components.
+	 */
+	protected abstract fun initializeComponents()
 
-    /**
-     * Tells this [BaseViewHolder] to perform Clean-Up procedures for avoiding Memory Leak.
-     */
-    protected abstract fun cleanUp()
+	/**
+	 * Tells this [BaseViewHolder] to perform Clean-Up procedures for avoiding Memory Leak.
+	 */
+	protected abstract fun cleanUp()
 
 }
