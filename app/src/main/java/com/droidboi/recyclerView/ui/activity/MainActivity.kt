@@ -1,8 +1,9 @@
-package com.droidboi.recyclerView
+package com.droidboi.recyclerView.ui.activity
 
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
+import com.droidboi.recyclerView.R
 
 class MainActivity : AppCompatActivity() {
 

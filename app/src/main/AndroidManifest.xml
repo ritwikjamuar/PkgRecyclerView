@@ -13,7 +13,7 @@
 		android:theme="@style/Theme.PkgRecyclerView"
 		tools:ignore="AllowBackup">
 
-		<activity android:name=".MainActivity">
+		<activity android:name=".ui.activity.MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
