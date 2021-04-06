@@ -124,3 +124,75 @@ fun RecyclerView.clearItems() = adapter?.let { a ->
 	}
 
 } ?: Unit
+
+/**
+ * Initializes this [RecyclerView] with components you need to set in order for it to be rendered
+ * in the UI.
+ *
+ * @param Adapter Any [RecyclerView.Adapter] as the Adapter for this [RecyclerView].
+ * @param LayoutManager Any [RecyclerView.LayoutManager] as the Layout Manager
+ *   for this [RecyclerView].
+ * @param rvAdapter Instance of [Adapter].
+ * @param rvLayoutManager Instance of [LayoutManager].
+ * @param scrollListener Any [RecyclerView.OnScrollListener] to intercept the scroll
+ *   on this [RecyclerView].
+ * @author Ritwik Jamuar
+ */
+fun <Adapter : RecyclerView.Adapter<*>, LayoutManager : RecyclerView.LayoutManager> RecyclerView.initialize(
+	rvAdapter: Adapter,
+	rvLayoutManager: LayoutManager,
+	scrollListener: RecyclerView.OnScrollListener? = null
+) {
+
+	adapter = rvAdapter // Set the Adapter.
+
+	layoutManager = rvLayoutManager // Set the Layout Manager.
+
+	// Set the Scroll Listener only if it is provided.
+	scrollListener?.let { listener ->
+		addOnScrollListener(listener)
+	}
+
+}
+
+/**
+ * Initializes this [RecyclerView] with components you need to set in order for it to be rendered
+ * in the UI.
+ *
+ * @param Adapter Any [RecyclerView.Adapter] as the Adapter for this [RecyclerView].
+ * @param LayoutManager Any [RecyclerView.LayoutManager] as the Layout Manager
+ *   for this [RecyclerView].
+ * @param Decoration Any [RecyclerView.ItemDecoration] as the Item Decoration to be used
+ *   in this [RecyclerView].
+ * @param rvAdapter Instance of [Adapter].
+ * @param rvLayoutManager Instance of [LayoutManager].
+ * @param decoration Instance of [Decoration].
+ * @param scrollListener Any [RecyclerView.OnScrollListener] to intercept the scroll
+ *   on this [RecyclerView].
+ * @author Ritwik Jamuar
+ */
+fun <
+		Adapter : RecyclerView.Adapter<*>,
+		LayoutManager : RecyclerView.LayoutManager,
+		Decoration : RecyclerView.ItemDecoration
+		> RecyclerView.initialize(
+	rvAdapter: Adapter,
+	rvLayoutManager: LayoutManager,
+	decoration: Decoration,
+	scrollListener: RecyclerView.OnScrollListener? = null
+) {
+	initialize(rvAdapter, rvLayoutManager, scrollListener) // Use the method above.
+	addItemDecoration(decoration) // Add the Item Decoration.
+}
+
+/**
+ * Cleans-up any used references of [RecyclerView.Adapter], [RecyclerView.LayoutManager] and such
+ * in this [RecyclerView] in order to avoid Memory Leaks.
+ *
+ * @author Ritwik Jamuar
+ */
+fun RecyclerView.cleanUp() {
+	adapter = null // De-Reference the Adapter.
+	layoutManager = null // De-Reference the Layout Manager.
+	clearOnScrollListeners() // Clear all the Scroll Listeners.
+}
