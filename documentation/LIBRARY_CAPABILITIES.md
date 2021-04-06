@@ -7,7 +7,7 @@ Here are some classes offered:
  - `BaseMultipleVHAdapter.kt`: An Abstract `RecyclerView.Adapter` which renders n-Type of `RecyclerView.ViewHolder`.
  - `Utility.kt`: Kotlin File containing various Utility Extension Methods around `RecyclerView` and some `typealias` to help with intercepting events from the `RecyclerView.ViewHolder` and `RecyclerView.Adapter`.
 
-Continuing on the previous example, we can change the following files with the help of this Library:
+Continuing on the [previous example](documentation/NEED_OF_THIS_LIBRARY.md), we can change the following files with the help of this Library:
 
 `FoodViewHolder.kt`
 
