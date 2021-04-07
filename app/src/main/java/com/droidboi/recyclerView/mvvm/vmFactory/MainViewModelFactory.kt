@@ -3,10 +3,10 @@ package com.droidboi.recyclerView.mvvm.vmFactory
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-import com.droidboi.recyclerView.mvvm.model.ACTION_NONE
-import com.droidboi.recyclerView.mvvm.model.MainModel
-
 import com.droidboi.recyclerView.mvvm.repository.CommonRepository
+
+import com.droidboi.recyclerView.mvvm.uiData.ACTION_NONE
+import com.droidboi.recyclerView.mvvm.uiData.MainModel
 
 import com.droidboi.recyclerView.mvvm.viewModel.MainViewModel
 

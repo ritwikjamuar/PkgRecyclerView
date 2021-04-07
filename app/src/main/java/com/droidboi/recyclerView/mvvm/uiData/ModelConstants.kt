@@ -1,4 +1,4 @@
-package com.droidboi.recyclerView.mvvm.model
+package com.droidboi.recyclerView.mvvm.uiData
 
 /**
  * Constant [Int] as no Action

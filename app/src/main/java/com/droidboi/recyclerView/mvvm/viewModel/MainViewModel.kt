@@ -4,12 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-import com.droidboi.recyclerView.mvvm.model.ACTION_POPULATE_MENU_OPTIONS
-
-import com.droidboi.recyclerView.mvvm.model.MainModel
 import com.droidboi.recyclerView.mvvm.model.MenuOption
 
 import com.droidboi.recyclerView.mvvm.repository.CommonRepository
+
+import com.droidboi.recyclerView.mvvm.uiData.ACTION_POPULATE_MENU_OPTIONS
+import com.droidboi.recyclerView.mvvm.uiData.MainModel
 
 /**
  * [ViewModel] of [com.droidboi.recyclerView.ui.activity.MainActivity].
@@ -54,7 +54,7 @@ class MainViewModel(
 	 *
 	 * @param option Instance of [MenuOption] as the selection.
 	 */
-	fun onOptionSelected(option: MenuOption) = when(option.id) {
+	fun onOptionSelected(option: MenuOption) = when (option.id) {
 
 		1 -> Unit // TODO : Navigate to some activity.
 

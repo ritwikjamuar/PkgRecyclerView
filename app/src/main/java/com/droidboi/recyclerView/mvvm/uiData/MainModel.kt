@@ -1,4 +1,6 @@
-package com.droidboi.recyclerView.mvvm.model
+package com.droidboi.recyclerView.mvvm.uiData
+
+import com.droidboi.recyclerView.mvvm.model.MenuOption
 
 /**
  * UI Data Model for [com.droidboi.recyclerView.ui.activity.MainActivity].

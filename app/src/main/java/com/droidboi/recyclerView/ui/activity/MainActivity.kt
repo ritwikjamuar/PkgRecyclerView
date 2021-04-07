@@ -14,9 +14,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.droidboi.recyclerView.databinding.ActivityMainBinding
 
-import com.droidboi.recyclerView.mvvm.model.ACTION_NONE
-import com.droidboi.recyclerView.mvvm.model.ACTION_POPULATE_MENU_OPTIONS
-import com.droidboi.recyclerView.mvvm.model.MainModel
+import com.droidboi.recyclerView.mvvm.uiData.ACTION_NONE
+import com.droidboi.recyclerView.mvvm.uiData.ACTION_POPULATE_MENU_OPTIONS
+import com.droidboi.recyclerView.mvvm.uiData.MainModel
 
 import com.droidboi.recyclerView.mvvm.viewModel.MainViewModel
 
