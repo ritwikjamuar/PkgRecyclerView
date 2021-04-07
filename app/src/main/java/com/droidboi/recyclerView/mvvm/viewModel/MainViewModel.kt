@@ -39,6 +39,35 @@ class MainViewModel(
 	val uiLiveData: LiveData<MainModel>
 		get() = _uiLiveData
 
+	/*-------------------------------------- Public Methods --------------------------------------*/
+
+	/**
+	 * Handles the event when the UI is visible.
+	 */
+	fun onUIStarted() {
+		model.menuOptions = repository.provideOptions() // Populate the List of Menu Options.
+		notifyActionInUI(ACTION_POPULATE_MENU_OPTIONS) // Notify the UI to update the View.
+	}
+
+	/**
+	 * Handles the event when a Menu Option is selected by the User.
+	 *
+	 * @param option Instance of [MenuOption] as the selection.
+	 */
+	fun onOptionSelected(option: MenuOption) = when(option.id) {
+
+		1 -> Unit // TODO : Navigate to some activity.
+
+		2 -> Unit // TODO : Navigate to some activity.
+
+		3 -> Unit // TODO : Navigate to some activity.
+
+		4 -> Unit // TODO : Navigate to some activity.
+
+		else -> Unit
+
+	}
+
 	/*-------------------------------------- Private Methods -------------------------------------*/
 
 	/**
