@@ -4,6 +4,8 @@ import android.content.res.AssetManager
 
 import com.droidboi.recyclerView.mvvm.model.MenuOption
 
+import com.squareup.moshi.Moshi
+
 import java.io.IOException
 
 /**
@@ -13,7 +15,7 @@ import java.io.IOException
  *   from the 'assets' folder.
  * @author Ritwik Jamuar
  */
-class CommonRepository(private val assetManager: AssetManager) {
+class CommonRepository(private val assetManager: AssetManager, private val moshi: Moshi) {
 
 	/**
 	 * Provides the Menu Items to be displayed.
@@ -32,6 +34,37 @@ class CommonRepository(private val assetManager: AssetManager) {
 	}
 
 	/*-------------------------------------- Private Methods -------------------------------------*/
+
+	/**
+	 * Parses a given JSON into the intended class.
+	 *
+	 * @param T Any Data Class.
+	 * @param json [String] denoting the JSON Content we want to parse.
+	 * @param className [Class] of [T].
+	 * @return An instance of [T] if the [json] is not null, else null if the [json] is null
+	 * or there was some exception while parsing the [json].
+	 */
+	private fun <T> parseJSON(json: String?, className: Class<T>): T? = try {
+
+		// Check whether the 'json' is null or not.
+		if (json == null) {
+
+			// At this point, the 'json' is null, so we can't do any parsing with it.
+			// So, return null.
+			null
+
+		} else {
+			moshi.adapter(className).fromJson(json) // Try to parse the 'json' using 'moshi'.
+		}
+
+	} catch (e: IOException) {
+
+		// At this point, there was some problem in parsing the JSON, so we print the Stack Trace
+		// and return null.
+		e.printStackTrace()
+		null
+
+	}
 
 	/**
 	 * Loads a JSON File from Assets using [assetManager].
