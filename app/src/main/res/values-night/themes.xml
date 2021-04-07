@@ -27,4 +27,27 @@
 
 	</style>
 
+	<style name="SuperHeroNameTheme">
+
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">22sp</item>
+
+	</style>
+
+	<style name="SuperHeroPowerTheme">
+
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:layout_marginTop">5dp</item>
+
+	</style>
+
+	<style name="SuperHeroCardTheme" parent="CardView">
+
+		<item name="cardUseCompatPadding">true</item>
+		<item name="cardCornerRadius">10dp</item>
+		<item name="cardBackgroundColor">#689F38</item>
+
+	</style>
+
 </resources>
