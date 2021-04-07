@@ -3,6 +3,7 @@ package com.droidboi.recyclerView.mvvm.repository
 import android.content.res.AssetManager
 
 import com.droidboi.recyclerView.mvvm.model.MenuOption
+import com.droidboi.recyclerView.mvvm.model.SuperHero
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -37,6 +38,17 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 		add(MenuOption(3, "RecyclerView with 3 ViewHolder to demonstrate Pagination"))
 		add(MenuOption(4, "RecyclerView with 4 ViewHolder to demonstrate News Feed like UI"))
 	}
+
+	/**
+	 * Fetches the Collection of [SuperHero] from the JSON File in the 'assets' folder.
+	 *
+	 * @return [List] of [SuperHero] denoting all the Super Heroes if the JSON File is found
+	 * and parsed successfully, else an empty [List].
+	 */
+	fun provideSuperHeroes(): List<SuperHero> = parseJSON(
+		loadJSONFromAssets("superheroes_response.json"),
+		Types.newParameterizedType(List::class.java, SuperHero::class.java)
+	) ?: LinkedList()
 
 	/*-------------------------------------- Private Methods -------------------------------------*/
 
