@@ -83,7 +83,10 @@ class MainActivity : AppCompatActivity() {
 	 */
 	private fun initializeComponents() {
 		binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
-		viewModel = ViewModelProvider(this, MainViewModelFactory()).get(MainViewModel::class.java)
+		viewModel = ViewModelProvider(
+			this,
+			MainViewModelFactory(this)
+		).get(MainViewModel::class.java)
 	}
 
 	/**

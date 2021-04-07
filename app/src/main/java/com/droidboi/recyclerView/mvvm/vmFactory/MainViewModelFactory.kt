@@ -5,20 +5,28 @@ import androidx.lifecycle.ViewModelProvider
 
 import com.droidboi.recyclerView.mvvm.model.ACTION_NONE
 import com.droidboi.recyclerView.mvvm.model.MainModel
+
 import com.droidboi.recyclerView.mvvm.repository.CommonRepository
 
 import com.droidboi.recyclerView.mvvm.viewModel.MainViewModel
-import java.util.*
+
+import com.droidboi.recyclerView.ui.activity.MainActivity
+
+import java.util.LinkedList
 
 /**
  * [ViewModelProvider] of [MainViewModel].
  *
  * @author Ritwik Jamuar
  */
-class MainViewModelFactory : ViewModelProvider.NewInstanceFactory() {
+class MainViewModelFactory(private val activity: MainActivity) :
+	ViewModelProvider.NewInstanceFactory() {
 
 	@Suppress("UNCHECKED_CAST")
 	override fun <T : ViewModel?> create(modelClass: Class<T>): T =
-		MainViewModel(MainModel(ACTION_NONE, LinkedList()), CommonRepository()) as T
+		MainViewModel(
+			MainModel(ACTION_NONE, LinkedList()),
+			CommonRepository(activity.assets)
+		) as T
 
 }
