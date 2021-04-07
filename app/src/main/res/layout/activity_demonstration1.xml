@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:orientation="vertical"
 	tools:context=".ui.activity.Demonstration1Activity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar_demonstration1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?attr/colorPrimary"
+		app:title="@string/toolbar_title_super_hero_collection"
+		app:titleTextColor="@color/white" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/list_super_heroes"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:itemCount="5"
+		tools:listitem="@layout/item_super_hero" />
+
+</LinearLayout>
