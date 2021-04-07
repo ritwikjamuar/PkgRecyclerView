@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.droidboi.recyclerView.databinding.ActivityDemonstration1Binding
 
 import com.droidboi.recyclerView.mvvm.uiData.ACTION_NONE
+import com.droidboi.recyclerView.mvvm.uiData.ACTION_POPULATE_SUPER_HEROES
 
 import com.droidboi.recyclerView.mvvm.uiData.Demonstration1Model
 import com.droidboi.recyclerView.mvvm.uiData.MainModel
@@ -23,6 +24,7 @@ import com.droidboi.recyclerView.mvvm.viewModel.Demonstration1ViewModel
 import com.droidboi.recyclerView.mvvm.vmFactory.Demonstration1ViewModelFactory
 
 import com.droidboi.recyclerView.ui.adapter.SuperHeroAdapter
+import com.droidboi.recyclerView.utility.addItems
 
 import com.droidboi.recyclerView.utility.cleanUp
 import com.droidboi.recyclerView.utility.initialize
@@ -65,6 +67,11 @@ class Demonstration1Activity : AppCompatActivity() {
 		setContentView(binding.root)
 		setUpViews()
 		attachObservers()
+	}
+
+	override fun onStart() {
+		super.onStart()
+		viewModel.onUIStarted()
 	}
 
 	override fun onDestroy() {
@@ -110,6 +117,10 @@ class Demonstration1Activity : AppCompatActivity() {
 	private fun onUIDataChanged(model: Demonstration1Model) = when (model.action) {
 
 		ACTION_NONE -> Unit
+
+		ACTION_POPULATE_SUPER_HEROES -> {
+			binding.listSuperHeroes.addItems(model.superHeroes, true)
+		}
 
 		else -> Unit
 

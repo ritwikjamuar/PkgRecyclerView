@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 import com.droidboi.recyclerView.mvvm.repository.CommonRepository
+import com.droidboi.recyclerView.mvvm.uiData.ACTION_POPULATE_SUPER_HEROES
 
 import com.droidboi.recyclerView.mvvm.uiData.Demonstration1Model
 
@@ -35,6 +36,16 @@ class Demonstration1ViewModel(
 	 */
 	val uiLiveData: LiveData<Demonstration1Model>
 		get() = _uiLiveData
+
+	/*-------------------------------------- Public Methods --------------------------------------*/
+
+	/**
+	 * Handles the event when the UI is visible.
+	 */
+	fun onUIStarted() {
+		model.superHeroes = repository.provideSuperHeroes()
+		notifyActionInUI(ACTION_POPULATE_SUPER_HEROES)
+	}
 
 	/*-------------------------------------- Private Methods -------------------------------------*/
 
