@@ -1,5 +1,6 @@
 package com.droidboi.recyclerView.utility
 
+import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 import com.droidboi.recyclerView.adapter.BaseMultipleVHAdapter
