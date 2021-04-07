@@ -5,8 +5,13 @@ import android.content.res.AssetManager
 import com.droidboi.recyclerView.mvvm.model.MenuOption
 
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
 
 import java.io.IOException
+
+import java.lang.reflect.Type
+
+import java.util.*
 
 /**
  * A Repository that provides all the necessary data to be shown in the UI.
@@ -40,11 +45,11 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 	 *
 	 * @param T Any Data Class.
 	 * @param json [String] denoting the JSON Content we want to parse.
-	 * @param className [Class] of [T].
+	 * @param type [Type] of [T].
 	 * @return An instance of [T] if the [json] is not null, else null if the [json] is null
 	 * or there was some exception while parsing the [json].
 	 */
-	private fun <T> parseJSON(json: String?, className: Class<T>): T? = try {
+	private fun <T> parseJSON(json: String?, type: Type): T? = try {
 
 		// Check whether the 'json' is null or not.
 		if (json == null) {
@@ -54,7 +59,7 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 			null
 
 		} else {
-			moshi.adapter(className).fromJson(json) // Try to parse the 'json' using 'moshi'.
+			moshi.adapter<T>(type).fromJson(json) // Try to parse the 'json' using 'moshi'.
 		}
 
 	} catch (e: IOException) {
