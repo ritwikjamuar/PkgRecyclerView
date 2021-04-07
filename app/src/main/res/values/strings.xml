@@ -2,4 +2,6 @@
 
 	<string name="app_name">PkgRecyclerView</string>
 
+	<string name="toolbar_title_library_use_cases">PkgRecyclerView Use Cases</string>
+
 </resources>
