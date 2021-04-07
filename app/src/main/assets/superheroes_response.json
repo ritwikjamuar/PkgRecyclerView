@@ -1,0 +1,154 @@
+[
+  {
+    "id" : 1,
+    "name" : "Batman",
+    "power" : [
+      "Intelligence",
+      "Master Tactician",
+      "Peak Human Condition",
+      "Stamina",
+      "Stealth",
+      "Weapons Master",
+      "Rich"
+    ]
+  },
+  {
+    "id" : 2,
+    "name" : "Superman",
+    "power" : [
+      "Super Strength",
+      "Super Speed",
+      "Flight",
+      "Vision - X-Ray",
+      "Vision - Heat",
+      "Enhanced Senses",
+      "Enhanced Memory",
+      "Reflex"
+    ]
+  },
+  {
+    "id" : 3,
+    "name" : "Wonder Woman",
+    "power" : [
+      "Acrobatics",
+      "Electrokinesis",
+      "Jump",
+      "Intelligence",
+      "Master Martial Arts",
+      "Agility"
+    ]
+  },
+  {
+    "id" : 4,
+    "name" : "Flash",
+    "power" : [
+      "Super Speed",
+      "Time Travel",
+      "Time-frame Control",
+      "Speed Force",
+      "Stamina"
+    ]
+  },
+  {
+    "id" : 5,
+    "name" : "Aquaman",
+    "power" : [
+      "Underwater Breathing",
+      "Animal Control",
+      "Super Speed",
+      "Super Strength",
+      "Stamina"
+    ]
+  },
+  {
+    "id" : 6,
+    "name" : "Shazam",
+    "power" : [
+      "Super Strength",
+      "Super Speed",
+      "Flight",
+      "Vision - X-Ray",
+      "Vision - Heat",
+      "Enhanced Senses",
+      "Enhanced Memory",
+      "Reflex"
+    ]
+  },
+  {
+    "id" : 7,
+    "name" : "Iron Man",
+    "power" : [
+      "Intelligence",
+      "Endurance",
+      "Energy Blasts",
+      "Energy Beams",
+      "Energy Absorption",
+      "Agility",
+      "Attack Reflection",
+      "Master Tactician"
+    ]
+  },
+  {
+    "id" : 8,
+    "name" : "Thor Odinson",
+    "power" : [
+      "Electrokinesis",
+      "Endurance",
+      "Flight",
+      "Interstellar Travel",
+      "Weather Control",
+      "Jump"
+    ]
+  },
+  {
+    "id" : 9,
+    "name" : "Hulk",
+    "power" : [
+      "Super Strength",
+      "Super Speed",
+      "Accelerated Healing",
+      "Radiation Immunity",
+      "Rage Power",
+      "Dexterity"
+    ]
+  },
+  {
+    "id" : 10,
+    "name" : "Captain Marvel",
+    "power" : [
+      "Energy Blasts",
+      "Heat Generation",
+      "Interstellar Travel",
+      "Super Speed",
+      "Super Strength",
+      "Flight"
+    ]
+  },
+  {
+    "id" : 11,
+    "name" : "Dr. Strange",
+    "power" : [
+      "Enhanced Memory",
+      "Intelligence",
+      "Portal Creation",
+      "Agility",
+      "Black Hole Manipulation",
+      "Dimensional Travel",
+      "Energy Manipulation",
+      "Force Fields"
+    ]
+  },
+  {
+    "id" : 12,
+    "name" : "Spider Man",
+    "power" : [
+      "Acrobatics",
+      "Agility",
+      "Cosmic Awareness",
+      "Danger Sense",
+      "Reflexes",
+      "Peak Human Condition",
+      "Super Strength"
+    ]
+  }
+]
