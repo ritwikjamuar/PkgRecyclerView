@@ -14,6 +14,8 @@ import com.droidboi.recyclerView.ui.activity.Demonstration1Activity
 
 import com.squareup.moshi.Moshi
 
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+
 import java.util.LinkedList
 
 /**
@@ -28,7 +30,10 @@ class Demonstration1ViewModelFactory(private val activity: Demonstration1Activit
 	override fun <T : ViewModel?> create(modelClass: Class<T>): T =
 		Demonstration1ViewModel(
 			Demonstration1Model(ACTION_NONE, LinkedList()),
-			CommonRepository(activity.assets, Moshi.Builder().build()),
+			CommonRepository(
+				activity.assets,
+				Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+			),
 		) as T
 
 }
