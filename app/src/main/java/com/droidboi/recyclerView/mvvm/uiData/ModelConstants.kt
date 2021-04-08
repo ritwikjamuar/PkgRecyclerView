@@ -20,3 +20,21 @@ const val ACTION_POPULATE_SUPER_HEROES : Int = 1002
  * to [com.droidboi.recyclerView.ui.activity.Demonstration1Activity].
  */
 const val ACTION_NAVIGATE_TO_DEMO_1 : Int = 1003
+
+/**
+ * Constant [Int] as an Action to navigate
+ * to Demonstration2Activity.
+ */
+const val ACTION_NAVIGATE_TO_DEMO_2 : Int = 1004
+
+/**
+ * Constant [Int] as an Action to navigate
+ * to Demonstration3Activity.
+ */
+const val ACTION_NAVIGATE_TO_DEMO_3 : Int = 1005
+
+/**
+ * Constant [Int] as an Action to navigate
+ * to Demonstration4Activity.
+ */
+const val ACTION_NAVIGATE_TO_DEMO_4 : Int = 1006

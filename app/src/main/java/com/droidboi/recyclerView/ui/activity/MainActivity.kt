@@ -14,10 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.droidboi.recyclerView.databinding.ActivityMainBinding
 
-import com.droidboi.recyclerView.mvvm.uiData.ACTION_NAVIGATE_TO_DEMO_1
-import com.droidboi.recyclerView.mvvm.uiData.ACTION_NONE
-import com.droidboi.recyclerView.mvvm.uiData.ACTION_POPULATE_MENU_OPTIONS
-import com.droidboi.recyclerView.mvvm.uiData.MainModel
+import com.droidboi.recyclerView.mvvm.uiData.*
 
 import com.droidboi.recyclerView.mvvm.viewModel.MainViewModel
 
@@ -122,6 +119,12 @@ class MainActivity : AppCompatActivity() {
 		}
 
 		ACTION_NAVIGATE_TO_DEMO_1 -> navigate(Demonstration1Activity::class.java)
+
+		ACTION_NAVIGATE_TO_DEMO_2 -> Unit // TODO : Navigate User to Demonstration2Activity.
+
+		ACTION_NAVIGATE_TO_DEMO_3 -> Unit // TODO : Navigate User to Demonstration3Activity.
+
+		ACTION_NAVIGATE_TO_DEMO_4 -> Unit // TODO : Navigate User to Demonstration4Activity.
 
 		else -> Unit
 

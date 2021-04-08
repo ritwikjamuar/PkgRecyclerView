@@ -8,9 +8,7 @@ import com.droidboi.recyclerView.mvvm.model.MenuOption
 
 import com.droidboi.recyclerView.mvvm.repository.CommonRepository
 
-import com.droidboi.recyclerView.mvvm.uiData.ACTION_NAVIGATE_TO_DEMO_1
-import com.droidboi.recyclerView.mvvm.uiData.ACTION_POPULATE_MENU_OPTIONS
-import com.droidboi.recyclerView.mvvm.uiData.MainModel
+import com.droidboi.recyclerView.mvvm.uiData.*
 
 /**
  * [ViewModel] of [com.droidboi.recyclerView.ui.activity.MainActivity].
@@ -59,11 +57,11 @@ class MainViewModel(
 
 		1 -> notifyActionInUI(ACTION_NAVIGATE_TO_DEMO_1)
 
-		2 -> Unit // TODO : Navigate to some activity.
+		2 -> notifyActionInUI(ACTION_NAVIGATE_TO_DEMO_2)
 
-		3 -> Unit // TODO : Navigate to some activity.
+		3 -> notifyActionInUI(ACTION_NAVIGATE_TO_DEMO_3)
 
-		4 -> Unit // TODO : Navigate to some activity.
+		4 -> notifyActionInUI(ACTION_NAVIGATE_TO_DEMO_4)
 
 		else -> Unit
 
