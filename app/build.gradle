@@ -59,7 +59,7 @@ dependencies {
 	implementation 'androidx.lifecycle:lifecycle-common:2.4.0-alpha01'
 	implementation 'androidx.lifecycle:lifecycle-common-java8:2.3.1'
 	implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-	implementation 'com.squareup.moshi:moshi:1.12.0'
+	implementation 'com.squareup.moshi:moshi-kotlin:1.12.0'
 
 	kapt 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
