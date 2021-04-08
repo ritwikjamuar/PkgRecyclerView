@@ -8,6 +8,7 @@ import com.droidboi.recyclerView.mvvm.model.MenuOption
 
 import com.droidboi.recyclerView.mvvm.repository.CommonRepository
 
+import com.droidboi.recyclerView.mvvm.uiData.ACTION_NAVIGATE_TO_DEMO_1
 import com.droidboi.recyclerView.mvvm.uiData.ACTION_POPULATE_MENU_OPTIONS
 import com.droidboi.recyclerView.mvvm.uiData.MainModel
 
@@ -56,7 +57,7 @@ class MainViewModel(
 	 */
 	fun onOptionSelected(option: MenuOption) = when (option.id) {
 
-		1 -> Unit // TODO : Navigate to some activity.
+		1 -> notifyActionInUI(ACTION_NAVIGATE_TO_DEMO_1)
 
 		2 -> Unit // TODO : Navigate to some activity.
 

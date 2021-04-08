@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.droidboi.recyclerView.databinding.ActivityMainBinding
 
+import com.droidboi.recyclerView.mvvm.uiData.ACTION_NAVIGATE_TO_DEMO_1
 import com.droidboi.recyclerView.mvvm.uiData.ACTION_NONE
 import com.droidboi.recyclerView.mvvm.uiData.ACTION_POPULATE_MENU_OPTIONS
 import com.droidboi.recyclerView.mvvm.uiData.MainModel
@@ -27,6 +28,7 @@ import com.droidboi.recyclerView.ui.adapter.OptionAdapter
 import com.droidboi.recyclerView.utility.addItems
 import com.droidboi.recyclerView.utility.cleanUp
 import com.droidboi.recyclerView.utility.initialize
+import com.droidboi.recyclerView.utility.navigate
 
 /**
  * [AppCompatActivity] to render the Menu Options to demonstrate the Library.
@@ -118,6 +120,8 @@ class MainActivity : AppCompatActivity() {
 		ACTION_POPULATE_MENU_OPTIONS -> {
 			binding.listOptions.addItems(model.menuOptions, true)
 		}
+
+		ACTION_NAVIGATE_TO_DEMO_1 -> navigate(Demonstration1Activity::class.java)
 
 		else -> Unit
 
