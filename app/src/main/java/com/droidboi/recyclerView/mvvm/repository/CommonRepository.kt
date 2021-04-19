@@ -5,8 +5,15 @@ import android.content.res.AssetManager
 import com.droidboi.recyclerView.mvvm.model.MenuOption
 import com.droidboi.recyclerView.mvvm.model.SuperHero
 
+import com.droidboi.recyclerView.mvvm.network.CarBrandsResponse
+
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
+
+import kotlinx.coroutines.Dispatchers
+
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 
 import java.io.IOException
 
@@ -49,6 +56,31 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 		loadJSONFromAssets("superheroes_response.json"),
 		Types.newParameterizedType(List::class.java, SuperHero::class.java)
 	) ?: LinkedList()
+
+	/**
+	 * Fetches the Collection of [com.droidboi.recyclerView.mvvm.model.CarBrand]
+	 * from the JSON File in the 'assets' folder.
+	 *
+	 * @param page [Int] denoting the Page Number we are intending to fetch.
+	 * @return [kotlinx.coroutines.flow.Flow] of [CarBrandsResponse].
+	 */
+	suspend fun getCarBrands(page: Int) = flow {
+		emit(
+			parseJSON<CarBrandsResponse>(
+				loadJSONFromAssets(
+					// Based on the JSON Responses under 'assets' we have,
+					// whenever a page which is out of range is requested, we just returns a REST
+					// Response simulating the Empty Response.
+					if (page > 9 || page < 0) {
+						"car_brands_list_response_page_${page}.json"
+					} else {
+						"car_brands_empty_list_response.json"
+					}
+				),
+				CarBrandsResponse::class.java
+			)
+		)
+	}.flowOn(Dispatchers.IO) // Perform the operation in IO Thread.
 
 	/*-------------------------------------- Private Methods -------------------------------------*/
 
