@@ -1,0 +1,98 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 21,
+        "name": "Jeep",
+        "founded": 1943,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Jeep-Logo.png",
+        "head_quarters": "Ohio, United States of America",
+        "founders": [
+          "Henry J. Kaiser"
+        ],
+        "popularCars": [
+          "Jeep Model MB",
+          "Jeep Wrangler",
+          "Jeep Cherokee",
+          "Jeep Fleetvan",
+          "Jeep Wagoneer",
+          "Jeep Liberty"
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Koenigsegg",
+        "founded": 1994,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Koenigsegg-Logo.png",
+        "head_quarters": "Scania, Sweden",
+        "founders": [
+          "Christian Von Koenigsegg"
+        ],
+        "popularCars": [
+          "Koenigsegg CCX",
+          "Koenigsegg Agera",
+          "Koenigsegg One:1",
+          "Koenigsegg Regera",
+          "Koenigsegg Jesko",
+          "Koenigsegg Gemera"
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Lamborghini",
+        "founded": 1963,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Lamborghini-Logo.png",
+        "head_quarters": "Sant'Agata Bolognese, Italy",
+        "founders": [
+          "Ferruchio Lamborghini"
+        ],
+        "popularCars": [
+          "Lamborghini Miura",
+          "Lamborghini Countach",
+          "Lamborghini Diablo",
+          "Lamborghini Murciélago",
+          "Lamborghini Gallardo",
+          "Lamborghini Aventador",
+          "Lamborghini Hurácan",
+          "Lamborghini Urus",
+          "Lamborghini Sesto Elemento",
+          "Lamborghini Cian"
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Lancia",
+        "founded": 1906,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Lancia-Logo.png",
+        "head_quarters": "Turin, Italy",
+        "founders": [
+          "Vincenzo Lancia"
+        ],
+        "popularCars": [
+          "Lancia Lambda",
+          "Lancia Aprilia",
+          "Lancia Stratos",
+          "Lancia Beta",
+          "Lancia Delta HF Integrale"
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Lexus",
+        "founded": 1989,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Lexus-Logo.png",
+        "head_quarters": "Nagoya, Japan",
+        "founders": [
+          "Eiji Toyoda"
+        ],
+        "popularCars": [
+          "Lexus IS-F",
+          "Lexus LFA"
+        ]
+      }
+    ],
+    "page_number": 4,
+    "total_pages": 9
+  }
+}

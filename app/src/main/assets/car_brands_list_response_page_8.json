@@ -1,0 +1,77 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 41,
+        "name": "Subaru",
+        "founded": 1953,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Subaru-Logo.png",
+        "head_quarters": "Shibuya, Japan",
+        "founders": [
+          "Kenji Kita",
+          "Chikuhei Nakajima"
+        ],
+        "popularCars": [
+          "Subaru Impreza WR1",
+          "Subaru Impreza WRX STi"
+        ]
+      },
+      {
+        "id": 42,
+        "name": "Suzuki",
+        "founded": 1909,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Suzuki-Logo.png",
+        "head_quarters": "Shizuoka, Japan",
+        "founders": [
+          "Michio Suzuki"
+        ],
+        "popularCars": [
+          "Suzuki Kizashi 3",
+          "Suzuki Perrin Impreza WRX H6",
+          "Maruti Suzuki 800",
+          "Maruti Suzuki Swift",
+          "Maruti Suzuki Ciaz",
+          "Suzuki XL7 Pikes Peak"
+        ]
+      },
+      {
+        "id": 43,
+        "name": "Tesla",
+        "founded": 2003,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Tesla-Logo.png",
+        "head_quarters": "California, United States of America",
+        "founders": [
+          "Martin Eberhard",
+          "Marc Tarpenning"
+        ],
+        "popularCars": [
+          "Tesla Model S",
+          "Tesla Model 3",
+          "Tesla Model X"
+        ]
+      },
+      {
+        "id": 44,
+        "name": "Toyota",
+        "founded": 1937,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Toyota-Logo.png",
+        "head_quarters": "Toyota City, Japan",
+        "founders": [
+          "Kiichiro Toyoda"
+        ],
+        "popularCars": [
+          "Toyota Supra",
+          "Toyota MR-II",
+          "Toyota Fortuner",
+          "Toyota Hilux",
+          "Toyota Land Cruiser",
+          "Toyota Prius",
+          "Toyota Camry"
+        ]
+      }
+    ],
+    "page_number": 8,
+    "total_pages": 9
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 31,
+        "name": "Mercedes Benz",
+        "founded": 1926,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Mercedes-Logo.png",
+        "head_quarters": "Stuttgart, Germany",
+        "founders": [
+          "Karl Benz",
+          "Gottlieb Daimler"
+        ],
+        "popularCars": [
+          "Mercedes Benz Benz Patent-Motorwagen",
+          "Mercedes Benz 190E",
+          "Mercedes Benz 300 SL",
+          "Mercedes Benz SL 65 AMG",
+          "Mercedes Benz G63",
+          "Mercedes Benz SLR McLaren",
+          "Mercedes Benz SLS AMG",
+          "Mercedes AMG GT",
+          "Mercedes AMG One"
+        ]
+      },
+      {
+        "id": 32,
+        "name": "MG",
+        "founded": 2006,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/MG-Logo.png",
+        "head_quarters": "London, United Kingdom",
+        "founders": [
+          "William Wang"
+        ],
+        "popularCars": [
+          "MG 3",
+          "MG 6",
+          "MG ZS",
+          "MG Facelift",
+          "MG Hector"
+        ]
+      },
+      {
+        "id": 33,
+        "name": "Mini",
+        "founded": 1969,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Mini-Logo.png",
+        "head_quarters": "Famborough, UK",
+        "founders": [
+          "British Leyland"
+        ],
+        "popularCars": [
+          "Mini",
+          "Mini Van",
+          "Mini Cooper"
+        ]
+      },
+      {
+        "id": 34,
+        "name": "Mitsubishi",
+        "founded": 1870,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Mitsubishi-Logo.png",
+        "head_quarters": "Tokyo, Japan",
+        "founders": [
+          "Iwasaki Yatarō"
+        ],
+        "popularCars": [
+          "Mitsubishi Lancer Evolution VII",
+          "Mitsubishi Lancer Evolution VIII",
+          "Mitsubishi Lancer Evolution X"
+        ]
+      },
+      {
+        "id": 35,
+        "name": "McLaren",
+        "founded": 1933,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Nissan-Logo.png",
+        "head_quarters": "Yokohama, United Kingdom",
+        "founders": [
+          "Masujiro Hashimoto",
+          "Kenjiro Den"
+        ],
+        "popularCars": [
+          "Nissan Model 70",
+          "Nissan Skyline GTR",
+          "Nissan GTR R35"
+        ]
+      }
+    ],
+    "page_number": 6,
+    "total_pages": 9
+  }
+}

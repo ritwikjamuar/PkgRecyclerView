@@ -1,0 +1,103 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 16,
+        "name": "Ford",
+        "founded": 1899,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Ford-Logo.png",
+        "head_quarters": "Michigan, United States of America",
+        "founders": [
+          "Henry Ford"
+        ],
+        "popularCars": [
+          "Ford Model T",
+          "Ford Silver Sapphire",
+          "Ford Vega Roadster",
+          "Ford Thunderbird",
+          "Ford Mustang",
+          "Ford GT",
+          "Ford Escort",
+          "Ford Focus"
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Hennessey",
+        "founded": 1991,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Hennessey-Logo.png",
+        "head_quarters": "Texas, United States of America",
+        "founders": [
+          "John Hennessey"
+        ],
+        "popularCars": [
+          "Hennessey Venom GT",
+          "Hennessey Exorcist",
+          "Hennessey Velociraptor",
+          "Hennessey Venom F5"
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Honda",
+        "founded": 1946,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Honda-Logo.png",
+        "head_quarters": "Tokyo, Japan",
+        "founders": [
+          "Soichiro Honda",
+          "Takeo Fujisawa"
+        ],
+        "popularCars": [
+          "Honda S2000",
+          "Honda NSX",
+          "Honda Accord",
+          "Honda Civic",
+          "Honda HSV-010 GT",
+          "Honda Civic Type-R"
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Hyundai",
+        "founded": 1967,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Hyundai-Logo.png",
+        "head_quarters": "Seoul, South Korea",
+        "founders": [
+          "Chung Ju-Yung"
+        ],
+        "popularCars": [
+          "Hyundai Tuscon",
+          "Hyundai Elantra",
+          "Hyundai Creta",
+          "Hyundai Accent",
+          "Hyundai i10",
+          "Hyundai i20",
+          "Hyundai Sonata"
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Jaguar",
+        "founded": 1933,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Jaguar-Logo.png",
+        "head_quarters": "Whitley, United Kingdom",
+        "founders": [
+          "William Lyons"
+        ],
+        "popularCars": [
+          "Jaguar 100 Coupe",
+          "Jaguar XK140",
+          "Jaguar XJR",
+          "Jaguar Bertone",
+          "Jaguar E-Type",
+          "Jaguar F-Type",
+          "Jaguar Pirana",
+          "Jaguar XKR"
+        ]
+      }
+    ],
+    "page_number": 3,
+    "total_pages": 9
+  }
+}

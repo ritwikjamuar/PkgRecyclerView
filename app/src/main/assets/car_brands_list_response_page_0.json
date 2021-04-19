@@ -1,0 +1,99 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 1,
+        "name": "Abarth",
+        "founded": 1949,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Abarth-Logo.png",
+        "head_quarters": "Bologna, Italy",
+        "founders": [
+          "Carlo Abarth",
+          "Armando Scagliarini"
+        ],
+        "popularCars": [
+          "Abarth 205A Berlinetta",
+          "Porsche 356B Carrera GTL Abarth",
+          "Fiat-Abarth Zagato 750",
+          "Abarth Punto Grande"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Alfa Romeo",
+        "founded": 1910,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Alfa-Romeo-Logo.png",
+        "head_quarters": "Turin, Italy",
+        "founders": [
+          "Nicola Romeo",
+          "Alexandre Darracq",
+          "Ugo Stella"
+        ],
+        "popularCars": [
+          "Alfa Romeo 166",
+          "Alfa Romeo Tipo 33/3",
+          "Alfa Romeo Montréal",
+          "Alfa Romeo 4C"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Aston Martin",
+        "founded": 1913,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Aston-Martin-Logo.png",
+        "head_quarters": "Lagonda, United Kingdom",
+        "founders": [
+          "Lionel Martin",
+          "Robert Bamford"
+        ],
+        "popularCars": [
+          "Aston Martin MK-II",
+          "Aston Martin V8 Vantage",
+          "Aston Martin DB5",
+          "Aston Martin DB11",
+          "Aston Martin One-77"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Audi",
+        "founded": 1909,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Audi-Logo.png",
+        "head_quarters": "Ingolstadt, Germany",
+        "founders": [
+          "August Horch"
+        ],
+        "popularCars": [
+          "Audi 50",
+          "Audi Quattro",
+          "Audi TT",
+          "Audi A4",
+          "Audi S4",
+          "Audi R8",
+          "Audi e-Tron"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Bentley",
+        "founded": 1919,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Bentley-Logo.png",
+        "head_quarters": "London, United Kingdom",
+        "founders": [
+          "W. O. Bentley",
+          "H. M. Bentley"
+        ],
+        "popularCars": [
+          "Bentley 3 Liter",
+          "Bentley 4 1/2 Liter",
+          "Bentley S2 Continental",
+          "Bentley Continental GT",
+          "Bentley Mulsanne"
+        ]
+      }
+    ],
+    "page_number": 0,
+    "total_pages": 9
+  }
+}

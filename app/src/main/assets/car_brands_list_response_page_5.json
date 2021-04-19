@@ -1,0 +1,98 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 26,
+        "name": "Lotus",
+        "founded": 1948,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Lotus-Logo.png",
+        "head_quarters": "Norfolk, United Kingdom",
+        "founders": [
+          "Colin Chapman"
+        ],
+        "popularCars": [
+          "Lotus Elise",
+          "Lotus Exige",
+          "Lotus Evora",
+          "Lotus Evija"
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Land Rover",
+        "founded": 1948,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Land-Rover-Logo.png",
+        "head_quarters": "Coventry, United Kingdom",
+        "founders": [
+          "British Leyland"
+        ],
+        "popularCars": [
+          "Land Rover Series I",
+          "Land Rover Defender",
+          "Land Rover Discovery",
+          "Range Rover",
+          "Range Rover Evoque"
+        ]
+      },
+      {
+        "id": 28,
+        "name": "Maserati",
+        "founded": 1914,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Maserati-Logo.png",
+        "head_quarters": "Modena, Italy",
+        "founders": [
+          "Alfieri Maserati"
+        ],
+        "popularCars": [
+          "Maserati Tipo 26",
+          "Maserati 4CL",
+          "Maserati Reggiani-Campana Barachetta",
+          "Maserati Merak",
+          "Maserati BiTurbo II",
+          "Maserati GranTurismo",
+          "Maserati 4C Spyder",
+          "Maserari GranCabrio Sport",
+          "Maserati MC12"
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Mazda",
+        "founded": 1920,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Mazda-Logo.png",
+        "head_quarters": "Hiroshima, Japan",
+        "founders": [
+          "Jujiro Matsuda"
+        ],
+        "popularCars": [
+          "Mazda RX8",
+          "Mazda RX7",
+          "Mazda MX5",
+          "Mazda3"
+        ]
+      },
+      {
+        "id": 30,
+        "name": "McLaren",
+        "founded": 1963,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Lexus-Logo.png",
+        "head_quarters": "Woking, United Kingdom",
+        "founders": [
+          "Bruce McLaren",
+          "Ron Dennis"
+        ],
+        "popularCars": [
+          "McLaren F1",
+          "McLaren MP4-12C",
+          "McLaren 720S",
+          "McLaren P1",
+          "Mercedes Benz SLR McLaren",
+          "McLaren Senna"
+        ]
+      }
+    ],
+    "page_number": 5,
+    "total_pages": 9
+  }
+}

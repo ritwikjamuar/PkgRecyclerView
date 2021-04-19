@@ -1,0 +1,112 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 36,
+        "name": "Opel",
+        "founded": 1929,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Mercedes-Logo.png",
+        "head_quarters": "Hesse, Germany",
+        "founders": [
+          "Adam Opel"
+        ],
+        "popularCars": [
+          "Opel Admiral",
+          "Opel Kapitān",
+          "Opel Rekord",
+          "Opel Blitz",
+          "Opel Manta",
+          "Opel Astra VXR",
+          "Opel GTC Geneve"
+        ]
+      },
+      {
+        "id": 37,
+        "name": "Pagani",
+        "founded": 1992,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Pagani-Logo.png",
+        "head_quarters": "Modena, Italy",
+        "founders": [
+          "Horacio Pagani"
+        ],
+        "popularCars": [
+          "Pagani Zonda F",
+          "Pagani Zonda R",
+          "Pagani Zonda Tricolore",
+          "Pagani Huyara",
+          "Pagani Huyara BC"
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Peugeot",
+        "founded": 1896,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Peugeot.png",
+        "head_quarters": "Paris, France",
+        "founders": [
+          "Armand Peugeot"
+        ],
+        "popularCars": [
+          "Peugeot Vis-à-Vis",
+          "Peugeot 402 Èclipse",
+          "Peugeot 205 T16",
+          "Peugeot Quasar",
+          "Peugeot 407 Silhouette",
+          "Peugeot 207 S20000",
+          "Peugeot RCZ HYbrid4",
+          "Peugeot Sports RCZ",
+          "Peugeot 308R"
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Porsche",
+        "founded": 1939,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Porsche-Logo.png",
+        "head_quarters": "Stuttgart, Germany",
+        "founders": [
+          "Ferdinand Porsche"
+        ],
+        "popularCars": [
+          "Porsche 911 S",
+          "Porsche 911 GT",
+          "Porsche Boxter S",
+          "Porsche 911 Turbo S",
+          "Porsche Cayman S",
+          "Porsche Carrera GT",
+          "Porsche 918 Spyder",
+          "Porsche 917"
+        ]
+      },
+      {
+        "id": 40,
+        "name": "McLaren",
+        "founded": 1899,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Renault-Logo.png",
+        "head_quarters": "Boulogne-Billancourt, France",
+        "founders": [
+          "Louis Renault",
+          "Marcel Renault",
+          "Fernand Renault"
+        ],
+        "popularCars": [
+          "Renault Type A",
+          "Renault Type DM",
+          "Renault Viva Grand Sport",
+          "Renault Reinastella",
+          "Renault Étoile Filante",
+          "Renault Alpine A310",
+          "Renault 5 Turbo",
+          "Renault Roadster Laguna",
+          "Renault Mégane",
+          "Renault Fluence",
+          "Renault Clio",
+          "Renaultsport R.S.01"
+        ]
+      }
+    ],
+    "page_number": 7,
+    "total_pages": 9
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 6,
+        "name": "BMW",
+        "founded": 1916,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/BMW-Logo.png",
+        "head_quarters": "Munich, Germany",
+        "founders": [
+          "Karl Rapp",
+          "Franz Josef Popp",
+          "Camillo Castiglioni"
+        ],
+        "popularCars": [
+          "BMW 328 Mille Miglia Kamm Coupé",
+          "BMW Turbo Concept",
+          "BMW 3.0 CSI",
+          "BMW Z4",
+          "BMW M5"
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Bugatti",
+        "founded": 1909,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Bugatti-Logo.png",
+        "head_quarters": "Molsheim, France",
+        "founders": [
+          "Ettore Buggati"
+        ],
+        "popularCars": [
+          "Bugatti Centenary 1",
+          "Bugatti Type 57SC",
+          "Bugatti EB110 GT",
+          "Bugatti Veyron",
+          "Bugatti Chiron",
+          "Bugatti Bolide"
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Cadillac",
+        "founded": 1902,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Cadillac-Logo.png",
+        "head_quarters": "Michigan, United States of America",
+        "founders": [
+          "William Murphy",
+          "Lemuel Bowen",
+          "Henry M. Leland"
+        ],
+        "popularCars": [
+          "Cadillac Model A",
+          "Cadillac Series 314",
+          "Cadillac V16 Hartmann Cabriolet",
+          "Cadillac Roadster",
+          "Cadillac Eldorado Convertible",
+          "Cadillac Voyage",
+          "Cadillac CTS"
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Caterham",
+        "founded": 1973,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Caterham-Logo.png",
+        "head_quarters": "Surrey, United Kingdom",
+        "founders": [
+          "Graham Nearn"
+        ],
+        "popularCars": [
+          "Caterham 7 Roadster",
+          "Caterham 21",
+          "Caterham 7 270",
+          "Caterham 7 310",
+          "Caterham 7 420"
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Chevrolet",
+        "founded": 1911,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Chevy-Logo.png",
+        "head_quarters": "Michigan, United States of America",
+        "founders": [
+          "Arthur Chevrolet",
+          "Louis Chevrolet",
+          "William C. Durant"
+        ],
+        "popularCars": [
+          "Chevrolet Impala",
+          "Chevrolet Chevelle SS",
+          "Chevrolet Camaro SS",
+          "Chevrolet Corvette Stingray",
+          "Chevrolet Corvette Z06"
+        ]
+      }
+    ],
+    "page_number": 1,
+    "total_pages": 9
+  }
+}

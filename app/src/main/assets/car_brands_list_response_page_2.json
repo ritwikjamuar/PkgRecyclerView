@@ -1,0 +1,96 @@
+{
+  "status" : "SUCCESS",
+  "result" : {
+    "brands" : [
+      {
+        "id": 11,
+        "name": "Citroën",
+        "founded": 1919,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Citroen-Logo.png",
+        "head_quarters": "Saint-Ouen-sur-Seine, France",
+        "founders": [
+          "André Citroën"
+        ],
+        "popularCars": [
+          "Citroën Rosalie Coupe 15CV",
+          "Citroën 8CV",
+          "Citroën Traction Avant",
+          "Citroën DS",
+          "Citroën C4"
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Datsun",
+        "founded": 1931,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Datsun-Logo.png",
+        "head_quarters": "Tokyo, Japan",
+        "founders": [
+          "Yoshisuke Ayukawa"
+        ],
+        "popularCars": [
+          "Datsun Fairlady",
+          "Datsun Fairlady",
+          "Datsun 720",
+          "Datsun Cherry"
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Dodge",
+        "founded": 1902,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Dodge-Logo.png",
+        "head_quarters": "Michigan, United States of America",
+        "founders": [
+          "John Francis Dodge",
+          "Horace Elgin Dodge"
+        ],
+        "popularCars": [
+          "Dodge Firearrow III",
+          "Dodge Charger",
+          "Dodge Challenger",
+          "Dodge HEMI Charger",
+          "Dodge Viper"
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Ferrari",
+        "founded": 1939,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Ferrari-Logo.png",
+        "head_quarters": "Emila-Romagna, Italy",
+        "founders": [
+          "Enzo Ferrari"
+        ],
+        "popularCars": [
+          "Ferrari F40",
+          "Ferrari 250 GT",
+          "Enzo Ferrari",
+          "Ferrari 458",
+          "Ferrari LaFerrari"
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Fiat",
+        "founded": 1899,
+        "brand_image_url": "https://www.supercars.net/blog/wp-content/uploads/2019/12/Fiat-Logo.png",
+        "head_quarters": "Piedmont, Italy",
+        "founders": [
+          "Giovanni Agnelli"
+        ],
+        "popularCars": [
+          "Fiat 804",
+          "Fiat 514 MM",
+          "Fiat Abarth 750 GT Zagato",
+          "Fiat Abarth 1000 SP",
+          "Fiat Dino 2400 Spider",
+          "Fiat Punto",
+          "Fiat Barchetta"
+        ]
+      }
+    ],
+    "page_number": 2,
+    "total_pages": 9
+  }
+}
