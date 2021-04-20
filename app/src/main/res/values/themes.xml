@@ -50,4 +50,23 @@
 
 	</style>
 
+	<style name="CarBrand" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+
+	<style name="CarBrand.BrandName">
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:paddingStart">10dp</item>
+		<item name="android:paddingEnd">10dp</item>
+		<item name="android:textSize">18sp</item>
+		<item name="android:textColor">@color/color_text_car_brand_headquarter</item>
+		<item name="fontFamily">@font/roboto</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="CarBrand.HeadQuarter">
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">@color/color_text_car_brand_headquarter</item>
+		<item name="fontFamily">@font/roboto</item>
+	</style>
+
 </resources>
