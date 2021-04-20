@@ -1,0 +1,96 @@
+<vector
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:width="24dp"
+	android:height="24dp"
+	android:viewportWidth="64"
+	android:viewportHeight="64">
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="M15,9m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m14.883,19 l-1.841,14.723 1.958,2.61 1.958,-2.61 -1.841,-14.723z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m14,17h2a1,1 0,0 0,1 -1h-4a1,1 0,0 0,1 1z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m30,27a3,3 0,0 0,-2.249 1.02,1 1,0 0,1 -1.751,-0.66v-4.36a7.008,7.008 0,0 0,-7 -7,3 3,0 0,1 -1.894,2.783l1.886,15.093a1,1 0,0 1,-0.192 0.724l-3,4a1,1 0,0 1,-1.6 0l-3,-4a1,1 0,0 1,-0.192 -0.724l1.886,-15.093a3,3 0,0 1,-1.894 -2.783,7.008 7.008,0 0,0 -7,7v18h8.36a1,1 0,0 1,0.661 1.751,3 3,0 1,0 3.958,0 1,1 0,0 1,0.661 -1.751h8.36v-8.36a1,1 0,0 1,1.751 -0.661,3 3,0 1,0 2.249,-4.979z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m23,7h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m27,7h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m31,7h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m35,7h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m39,7h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m50,30h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m14,60h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m14,56h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m14,52h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m18,60h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m22,60h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m26,60h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m30,60h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m34,60h2v2h-2z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m60,60v-18h-6.36a1,1 0,0 1,-0.661 -1.751,3 3,0 1,0 -3.958,0 1,1 0,0 1,-0.661 1.751h-6.36v6.36a1,1 0,0 1,-1.751 0.66,3 3,0 1,0 0,3.959 1,1 0,0 1,1.751 0.661v6.36h4.419a5,5 0,1 1,9.162 0z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m52,27v-1h-2v1a1,1 0,0 0,2 0z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m57.941,10.079a7,7 0,1 0,-10.46 6.974,3.039 3.039,0 0,1 1.519,2.602v0.345h1v-7a1,1 0,0 1,2 0v7h1v-0.348a3.012,3.012 0,0 1,1.5 -2.59,7.029 7.029,0 0,0 3.441,-6.983zM52,9a1,1 0,0 1,-2 0v-1a1,1 0,0 1,2 0z" />
+
+	<path
+		android:fillColor="@color/color_text_car_brand_founder_name"
+		android:pathData="m48,22h6v2h-6z" />
+
+</vector>
