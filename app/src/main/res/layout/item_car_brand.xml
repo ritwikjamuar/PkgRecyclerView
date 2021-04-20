@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginHorizontal="10dp"
+	android:layout_marginVertical="5dp"
+	app:cardCornerRadius="10dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<androidx.constraintlayout.widget.Guideline
+			android:id="@+id/guideline_left"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			app:layout_constraintGuide_begin="10dp" />
+
+		<androidx.constraintlayout.widget.Guideline
+			android:id="@+id/guideline_right"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			app:layout_constraintGuide_end="10dp" />
+
+		<androidx.constraintlayout.widget.Guideline
+			android:id="@+id/guideline_top"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			app:layout_constraintGuide_begin="10dp" />
+
+		<androidx.constraintlayout.widget.Guideline
+			android:id="@+id/guideline_bottom"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			app:layout_constraintGuide_end="10dp" />
+
+		<ImageView
+			android:id="@+id/value_image_car_brand_logo"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:contentDescription="@string/imcd_car_brand_logo"
+			app:layout_constraintBottom_toTopOf="@id/value_text_car_brand_head_quarter"
+			app:layout_constraintStart_toStartOf="@id/guideline_left"
+			app:layout_constraintTop_toTopOf="@id/guideline_top"
+			tools:src="@drawable/ic_launcher_foreground" />
+
+		<TextView
+			android:id="@+id/value_text_car_brand_name"
+			style="@style/CarBrand.BrandName"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			app:layout_constraintBottom_toBottomOf="@id/value_image_car_brand_logo"
+			app:layout_constraintEnd_toEndOf="@id/guideline_right"
+			app:layout_constraintStart_toEndOf="@id/value_image_car_brand_logo"
+			app:layout_constraintTop_toTopOf="@id/value_image_car_brand_logo"
+			tools:text="Mercedes Benz" />
+
+		<TextView
+			android:id="@+id/value_text_car_brand_founded"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@drawable/ic_rounded_rectangle_car_brand_founded"
+			android:paddingStart="10dp"
+			android:paddingTop="5dp"
+			android:paddingEnd="10dp"
+			android:paddingBottom="5dp"
+			android:textColor="@color/color_text_car_brand_founded"
+			app:layout_constraintBottom_toBottomOf="@id/value_text_car_brand_name"
+			app:layout_constraintEnd_toEndOf="@id/value_text_car_brand_name"
+			app:layout_constraintTop_toTopOf="@id/value_text_car_brand_name"
+			tools:text="1905" />
+
+		<TextView
+			android:id="@+id/value_text_car_brand_head_quarter"
+			style="@style/CarBrand.HeadQuarter"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:paddingStart="10dp"
+			android:paddingTop="5dp"
+			android:paddingEnd="10dp"
+			android:paddingBottom="5dp"
+			app:layout_constraintBottom_toTopOf="@id/list_car_brand_founders"
+			app:layout_constraintEnd_toEndOf="@id/guideline_right"
+			app:layout_constraintStart_toStartOf="@id/guideline_left"
+			app:layout_constraintTop_toBottomOf="@id/value_image_car_brand_logo"
+			tools:text="Stuttgart, Germany" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/list_car_brand_founders"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:layout_constraintBottom_toTopOf="@id/list_car_brand_popular_cars"
+			app:layout_constraintEnd_toEndOf="@id/guideline_right"
+			app:layout_constraintStart_toStartOf="@id/guideline_left"
+			tools:itemCount="2"
+			tools:listitem="@layout/item_car_brand_founder" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/list_car_brand_popular_cars"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+			app:layout_constraintEnd_toEndOf="@id/guideline_right"
+			app:layout_constraintStart_toStartOf="@id/guideline_left"
+			tools:itemCount="4"
+			tools:listitem="@layout/item_car_brand_popular_car" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
