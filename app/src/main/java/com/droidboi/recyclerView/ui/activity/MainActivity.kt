@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
 
 		ACTION_NAVIGATE_TO_DEMO_1 -> navigate(Demonstration1Activity::class.java)
 
-		ACTION_NAVIGATE_TO_DEMO_2 -> Unit // TODO : Navigate User to Demonstration2Activity.
+		ACTION_NAVIGATE_TO_DEMO_2 -> navigate(Demonstration2Activity::class.java)
 
 		ACTION_NAVIGATE_TO_DEMO_3 -> Unit // TODO : Navigate User to Demonstration3Activity.
 
