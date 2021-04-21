@@ -14,7 +14,6 @@ import com.droidboi.recyclerView.ui.adapter.FounderAdapter
 import com.droidboi.recyclerView.ui.adapter.PopularCarAdapter
 
 import com.droidboi.recyclerView.utility.addItems
-import com.droidboi.recyclerView.utility.cleanUp
 import com.droidboi.recyclerView.utility.initialize
 
 import com.droidboi.recyclerView.viewHolder.BaseViewHolder
@@ -38,10 +37,7 @@ class CarBrandViewHolder(
 
 	override fun initializeComponents() = Unit
 
-	override fun cleanUp() = with(viewAccessor) {
-		listCarBrandFounders.cleanUp()
-		listCarBrandPopularCars.cleanUp()
-	}
+	override fun cleanUp() = Unit
 
 	/*-------------------------------------- Public Methods --------------------------------------*/
 
@@ -54,14 +50,14 @@ class CarBrandViewHolder(
 
 		valueTextCarBrandName.text = brand.name
 
-		picasso.load(brand.brandImageURL)
+		picasso.load(brand.brand_image_url)
 			.placeholder(R.drawable.ic_launcher_foreground)
 			.error(R.drawable.ic_launcher_background)
 			.into(valueImageCarBrandLogo)
 
 		valueTextCarBrandFounded.text = "${brand.founded}"
 
-		valueTextCarBrandHeadQuarter.text = brand.headQuarters
+		valueTextCarBrandHeadQuarter.text = brand.head_quarters
 
 		with(listCarBrandFounders) {
 			initialize(
