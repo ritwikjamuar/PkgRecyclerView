@@ -11,6 +11,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
@@ -65,6 +66,7 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 	 * @return [kotlinx.coroutines.flow.Flow] of [CarBrandsResponse].
 	 */
 	suspend fun getCarBrands(page: Int) = flow {
+		delay(2000) // Add a delay of 2 Seconds to simulate a API Response.
 		emit(
 			parseJSON<CarBrandsResponse>(
 				loadJSONFromAssets(
