@@ -38,3 +38,8 @@ const val ACTION_NAVIGATE_TO_DEMO_3 : Int = 1005
  * to Demonstration4Activity.
  */
 const val ACTION_NAVIGATE_TO_DEMO_4 : Int = 1006
+
+/**
+ * Constant [Int] as an Action to populate the Car Brands.
+ */
+const val ACTION_POPULATE_CAR_BRANDS : Int = 1007
