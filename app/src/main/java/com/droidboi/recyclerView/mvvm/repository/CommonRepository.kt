@@ -72,9 +72,9 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 					// whenever a page which is out of range is requested, we just returns a REST
 					// Response simulating the Empty Response.
 					if (page > 9 || page < 0) {
-						"car_brands_list_response_page_${page}.json"
-					} else {
 						"car_brands_empty_list_response.json"
+					} else {
+						"car_brands_list_response_page_${page}.json"
 					}
 				),
 				CarBrandsResponse::class.java
