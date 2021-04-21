@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline_left"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_begin="10dp" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline_right"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_end="10dp" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline_top"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_begin="10dp" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline_bottom"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_end="10dp" />
+
+	<com.airbnb.lottie.LottieAnimationView
+		android:id="@+id/view_error"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+		app:layout_constraintStart_toStartOf="@id/guideline_left"
+		app:layout_constraintTop_toTopOf="@id/guideline_top"
+		app:lottie_autoPlay="true"
+		app:lottie_loop="true"
+		app:lottie_rawRes="@raw/error_animation"
+		app:lottie_repeatMode="restart" />
+
+	<TextView
+		android:id="@+id/value_text_error_description"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:fontFamily="@font/roboto"
+		android:paddingHorizontal="10dp"
+		android:textColor="@color/color_text_error_description"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toTopOf="@id/button_retry"
+		app:layout_constraintEnd_toEndOf="@id/guideline_right"
+		app:layout_constraintStart_toEndOf="@id/view_error"
+		app:layout_constraintTop_toTopOf="@id/guideline_top"
+		tools:text="There is some error encountered! We are working behind the scenes to get this fix. Please be patient!" />
+
+	<TextView
+		android:id="@+id/button_retry"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/ic_rounded_rectangle_car_brand_founded"
+		android:layout_marginVertical="10dp"
+		android:paddingHorizontal="10dp"
+		android:paddingVertical="5dp"
+		android:textAllCaps="true"
+		android:text="@string/label_retry"
+		android:textColor="@color/color_text_error_retry"
+		app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+		app:layout_constraintEnd_toEndOf="@id/guideline_right"
+		app:layout_constraintStart_toEndOf="@id/view_error"
+		app:layout_constraintTop_toBottomOf="@id/value_text_error_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

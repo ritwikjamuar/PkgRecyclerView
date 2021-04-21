@@ -1,11 +1,21 @@
 package com.droidboi.recyclerView.ui.viewHolder
 
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
+
+import androidx.core.content.ContextCompat
+
 import androidx.recyclerview.widget.LinearLayoutManager
+
+import com.airbnb.lottie.LottieProperty
+
+import com.airbnb.lottie.model.KeyPath
 
 import com.droidboi.recyclerView.R
 
 import com.droidboi.recyclerView.databinding.ItemCarBrandBinding
 import com.droidboi.recyclerView.databinding.ItemCarBrandFounderBinding
+import com.droidboi.recyclerView.databinding.ItemCarBrandLoadingBinding
 import com.droidboi.recyclerView.databinding.ItemCarBrandPopularCarBinding
 
 import com.droidboi.recyclerView.mvvm.model.CarBrand
@@ -46,7 +56,7 @@ class CarBrandViewHolder(
 	 *
 	 * @param brand Instance of [CarBrand] denoting the Car Brand details.
 	 */
-	fun setCarBrand(brand: CarBrand) : Unit = with(viewAccessor) {
+	fun setCarBrand(brand: CarBrand): Unit = with(viewAccessor) {
 
 		valueTextCarBrandName.text = brand.name
 
@@ -84,6 +94,33 @@ class CarBrandViewHolder(
 		}
 
 	}
+
+}
+
+/**
+ * [BaseViewHolder] to render a Loading Item for Car Brand.
+ *
+ * @param binding Instance of [ItemCarBrandLoadingBinding] as the View-Accessor
+ *   of this [BaseViewHolder]
+ * @author Ritwik Jamuar
+ */
+class CarBrandLoadingViewHolder(binding: ItemCarBrandLoadingBinding) :
+	BaseViewHolder<ItemCarBrandLoadingBinding>(binding, binding.root) {
+
+	/*--------------------------------- BaseViewHolder Callbacks ---------------------------------*/
+
+	override fun initializeComponents() = viewAccessor.viewLoading.addValueCallback(
+		KeyPath("**"),
+		LottieProperty.COLOR_FILTER,
+		{
+			PorterDuffColorFilter(
+				ContextCompat.getColor(viewAccessor.root.context, R.color.color_text_car_brand_headquarter),
+				PorterDuff.Mode.SRC_ATOP
+			)
+		}
+	)
+
+	override fun cleanUp() = Unit
 
 }
 
