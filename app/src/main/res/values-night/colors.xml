@@ -6,5 +6,7 @@
 	<color name="color_card_car_brand_founded_background">#95F395</color>
 	<color name="color_text_car_brand_founder_name">#C3C3C3</color>
 	<color name="color_text_car_brand_popular_car">#C3C3C3</color>
+	<color name="color_text_error_description">#C3C3C3</color>
+	<color name="color_text_error_retry">#006A00</color>
 
 </resources>
