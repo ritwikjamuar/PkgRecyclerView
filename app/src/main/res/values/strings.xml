@@ -7,4 +7,6 @@
 
 	<string name="imcd_car_brand_logo">Car Brand Logo</string>
 
+	<string name="label_retry">Retry</string>
+
 </resources>
