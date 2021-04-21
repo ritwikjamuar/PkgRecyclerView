@@ -43,3 +43,23 @@ const val ACTION_NAVIGATE_TO_DEMO_4 : Int = 1006
  * Constant [Int] as an Action to populate the Car Brands.
  */
 const val ACTION_POPULATE_CAR_BRANDS : Int = 1007
+
+/**
+ * Constant [Int] as an Action to show Loading in the [androidx.recyclerview.widget.RecyclerView].
+ */
+const val ACTION_SHOW_LOADING_ON_LIST : Int = 1008
+
+/**
+ * Constant [Int] as an Action to hide Loading from the [androidx.recyclerview.widget.RecyclerView].
+ */
+const val ACTION_HIDE_LOADING_ON_LIST : Int = 1009
+
+/**
+ * Constant [Int] as an Action to show Error in the [androidx.recyclerview.widget.RecyclerView].
+ */
+const val ACTION_SHOW_ERROR_ON_LIST : Int = 1010
+
+/**
+ * Constant [Int] as an Action to hide Error from the [androidx.recyclerview.widget.RecyclerView].
+ */
+const val ACTION_HIDE_ERROR_ON_LIST : Int = 1011
