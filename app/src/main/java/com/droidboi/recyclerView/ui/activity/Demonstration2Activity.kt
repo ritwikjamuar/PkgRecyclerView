@@ -102,7 +102,7 @@ class Demonstration2Activity : AppCompatActivity() {
 	/**
 	 * Click Listener of Retry in the Error View.
 	 */
-	private val errorListener : () -> Unit = {
+	private val errorListener: () -> Unit = {
 		viewModel.onRetryClicked()
 	}
 
@@ -143,6 +143,14 @@ class Demonstration2Activity : AppCompatActivity() {
 	 * Sets-up the views under [binding].
 	 */
 	private fun setUpViews() = with(binding) {
+		setSupportActionBar(toolbarDemonstration2)
+		supportActionBar?.let { actionBar ->
+			actionBar.setDisplayHomeAsUpEnabled(true)
+			actionBar.setDisplayShowHomeEnabled(true)
+		}
+		toolbarDemonstration2.setNavigationOnClickListener {
+			onBackPressed()
+		}
 		listCarBrands.initialize(
 			CarBrandAdapter(picasso, errorListener),
 			LinearLayoutManager(this@Demonstration2Activity),
