@@ -179,34 +179,26 @@ class Demonstration2Activity : AppCompatActivity() {
 		}
 
 		ACTION_SHOW_LOADING_ON_LIST -> with(binding.listCarBrands) {
-			(adapter as? CarBrandAdapter)?.let { adapter ->
-				post {
-					adapter.addLoading()
-				}
+			post {
+				(adapter as? CarBrandAdapter)?.addLoading()
 			}
 		} ?: Unit
 
 		ACTION_HIDE_LOADING_ON_LIST -> with(binding.listCarBrands) {
-			(adapter as? CarBrandAdapter)?.let { adapter ->
-				post {
-					adapter.removeLoading()
-				}
+			post {
+				(adapter as? CarBrandAdapter)?.removeLoading()
 			}
 		}
 
 		ACTION_SHOW_ERROR_ON_LIST -> with(binding.listCarBrands) {
-			(adapter as? CarBrandAdapter)?.let { adapter ->
-				post {
-					adapter.addError(model.errorDescription)
-				}
+			post {
+				(adapter as? CarBrandAdapter)?.addError(model.errorDescription)
 			}
 		}
 
 		ACTION_HIDE_ERROR_ON_LIST -> with(binding.listCarBrands) {
-			(adapter as? CarBrandAdapter)?.let { adapter ->
-				post {
-					adapter.removeError()
-				}
+			post {
+				(adapter as? CarBrandAdapter)?.removeError()
 			}
 		}
 
