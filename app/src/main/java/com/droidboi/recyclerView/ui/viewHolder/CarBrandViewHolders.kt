@@ -70,6 +70,14 @@ class CarBrandViewHolder(
 		valueTextCarBrandHeadQuarter.text = brand.head_quarters
 
 		with(listCarBrandFounders) {
+
+			// Additional Check to ignore the re-creation of
+			// RecyclerView's Adapter and LayoutManager.
+			// This check is due to the reason that creating a Views under ViewHolder
+			// can prove costly especially when the View is complex,
+			// So we simply halt the further execution if there is already
+			if (adapter != null)
+
 			initialize(
 				FounderAdapter(),
 				LinearLayoutManager(listCarBrandFounders.context).apply {
@@ -82,6 +90,14 @@ class CarBrandViewHolder(
 		}
 
 		with(listCarBrandPopularCars) {
+
+			// Additional Check to ignore the re-creation of
+			// RecyclerView's Adapter and LayoutManager.
+			// This check is due to the reason that creating a Views under ViewHolder
+			// can prove costly especially when the View is complex,
+			// So we simply halt the further execution if there is already
+			if (adapter != null) return
+
 			initialize(
 				PopularCarAdapter(),
 				LinearLayoutManager(listCarBrandFounders.context).apply {
