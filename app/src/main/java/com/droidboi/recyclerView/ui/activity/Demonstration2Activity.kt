@@ -176,6 +176,7 @@ class Demonstration2Activity : AppCompatActivity() {
 
 		ACTION_POPULATE_CAR_BRANDS -> model.recentlyPopulatedBrands?.let { brands ->
 			binding.listCarBrands.addItems(brands, false)
+			viewModel.onBrandsPopulated()
 		}
 
 		ACTION_SHOW_LOADING_ON_LIST -> with(binding.listCarBrands) {

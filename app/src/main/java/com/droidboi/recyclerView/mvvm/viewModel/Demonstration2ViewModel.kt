@@ -46,7 +46,7 @@ class Demonstration2ViewModel(
 	/**
 	 * [CoroutineScope] with [Dispatchers.IO] for performing any operation under IO Thread.
 	 */
-	private val ioThreadScope : CoroutineScope by lazy {
+	private val ioThreadScope: CoroutineScope by lazy {
 		CoroutineScope(Dispatchers.IO)
 	}
 
@@ -62,7 +62,19 @@ class Demonstration2ViewModel(
 	/**
 	 * Handles the event when the UI is visible.
 	 */
-	fun onUIStarted() = fetchCarBrands()
+	fun onUIStarted() = if (model.allBrands.isNotEmpty()) { // Check if there is data in the 'Model;.
+
+			// At this point, there is some data already, and thus we can directly show
+			// those fetched data first.
+			model.recentlyPopulatedBrands = model.allBrands
+			notifyActionInUI(ACTION_POPULATE_CAR_BRANDS)
+
+		} else {
+
+			// At this point, there is no existing data, and thus we must fetch the new data.
+			fetchCarBrands()
+
+		}
 
 	/**
 	 * Notifies the event that scroll has happened for the Car Brands.
@@ -91,7 +103,7 @@ class Demonstration2ViewModel(
 		if (
 			(visibleItemCount + firstVisibleItemPosition) >= totalItemCount
 			&&
-					firstVisibleItemPosition >= 0
+			firstVisibleItemPosition >= 0
 		) {
 
 			// At this point, the user has scrolled to the last item of the list.
@@ -110,6 +122,14 @@ class Demonstration2ViewModel(
 		fetchCarBrands()
 	}
 
+	/**
+	 * Handles the event when the [Demonstration2Model.recentlyPopulatedBrands] is populated
+	 * in the UI.
+	 */
+	fun onBrandsPopulated() {
+		model.recentlyPopulatedBrands = null
+	}
+
 	/*-------------------------------------- Private Methods -------------------------------------*/
 
 	/**
@@ -119,15 +139,16 @@ class Demonstration2ViewModel(
 		showLoading()
 		ioThreadScope.launch { // Switch to IO Thread to perform Data Processing.
 			repository.getCarBrands(model.currentPage).collect { brandResponse -> // Perform collecting the response from the repository.
-				mainThreadScope.launch { // Switch back to Main Thread for rendering.
-					hideLoading()
-					brandResponse?.let { response ->
-						model.recentlyPopulatedBrands = response.result.brands // Populate the 'recentlyPopulatedBrands' in the 'model'.
-						model.currentPage += 1 // Increase the Current Page by 1.
-						notifyActionInUI(ACTION_POPULATE_CAR_BRANDS) // Notifies the UI to Render this recently fetched Car Brands.
-					} ?: showError("Something went wrong") // Show Error if the Response is null.
+					mainThreadScope.launch { // Switch back to Main Thread for rendering.
+						hideLoading()
+						brandResponse?.let { response ->
+							model.recentlyPopulatedBrands = response.result.brands // Populate the 'recentlyPopulatedBrands' in the 'model'.
+							model.allBrands.addAll(response.result.brands) // Add this recently fetched Brands into collection of All Brands.
+							model.currentPage += 1 // Increase the Current Page by 1.
+							notifyActionInUI(ACTION_POPULATE_CAR_BRANDS) // Notifies the UI to Render this recently fetched Car Brands.
+						} ?: showError("Something went wrong") // Show Error if the Response is null.
+					}
 				}
-			}
 		}
 	}
 
