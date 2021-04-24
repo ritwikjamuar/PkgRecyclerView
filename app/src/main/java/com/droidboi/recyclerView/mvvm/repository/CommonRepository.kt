@@ -43,9 +43,7 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 	 */
 	fun provideOptions(): List<MenuOption> = ArrayList<MenuOption>().apply {
 		add(MenuOption(1, "RecyclerView with 1 ViewHolder and no interception of click"))
-		add(MenuOption(2, "RecyclerView with 1 ViewHolder and interception on click"))
-		add(MenuOption(3, "RecyclerView with 3 ViewHolder to demonstrate Pagination"))
-		add(MenuOption(4, "RecyclerView with 4 ViewHolder to demonstrate News Feed like UI"))
+		add(MenuOption(2, "RecyclerView with Multiple ViewHolder to demonstrate Pagination"))
 	}
 
 	/**
