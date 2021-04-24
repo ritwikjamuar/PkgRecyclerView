@@ -62,7 +62,8 @@ class Demonstration2ViewModel(
 	/**
 	 * Handles the event when the UI is visible.
 	 */
-	fun onUIStarted() = if (model.allBrands.isNotEmpty()) { // Check if there is data in the 'Model;.
+	fun onUIStarted() =
+		if (model.allBrands.isNotEmpty()) { // Check if there is data in the 'Model;.
 
 			// At this point, there is some data already, and thus we can directly show
 			// those fetched data first.
@@ -138,15 +139,15 @@ class Demonstration2ViewModel(
 	private fun fetchCarBrands() {
 		showLoading()
 		ioThreadScope.launch { // Switch to IO Thread to perform Data Processing.
-			repository.getCarBrands(model.currentPage).collect { brandResponse -> // Perform collecting the response from the repository.
+			repository.getCarBrands(model.currentPage)
+				.collect { collection -> // Perform collecting the response from the repository.
 					mainThreadScope.launch { // Switch back to Main Thread for rendering.
 						hideLoading()
-						brandResponse?.let { response ->
-							model.recentlyPopulatedBrands = response.result.brands // Populate the 'recentlyPopulatedBrands' in the 'model'.
-							model.allBrands.addAll(response.result.brands) // Add this recently fetched Brands into collection of All Brands.
-							model.currentPage += 1 // Increase the Current Page by 1.
-							notifyActionInUI(ACTION_POPULATE_CAR_BRANDS) // Notifies the UI to Render this recently fetched Car Brands.
-						} ?: showError("Something went wrong") // Show Error if the Response is null.
+						model.recentlyPopulatedBrands =
+							collection // Populate the 'recentlyPopulatedBrands' in the 'model'.
+						model.allBrands.addAll(collection) // Add this recently fetched Brands into collection of All Brands.
+						model.currentPage += 1 // Increase the Current Page by 1.
+						notifyActionInUI(ACTION_POPULATE_CAR_BRANDS) // Notifies the UI to Render this recently fetched Car Brands.
 					}
 				}
 		}

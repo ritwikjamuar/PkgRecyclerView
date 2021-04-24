@@ -2,6 +2,7 @@ package com.droidboi.recyclerView.mvvm.repository
 
 import android.content.res.AssetManager
 
+import com.droidboi.recyclerView.mvvm.model.CarBrandCollection
 import com.droidboi.recyclerView.mvvm.model.MenuOption
 import com.droidboi.recyclerView.mvvm.model.SuperHero
 
@@ -68,18 +69,20 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 	suspend fun getCarBrands(page: Int) = flow {
 		delay(2000) // Add a delay of 2 Seconds to simulate a API Response.
 		emit(
-			parseJSON<CarBrandsResponse>(
-				loadJSONFromAssets(
-					// Based on the JSON Responses under 'assets' we have,
-					// whenever a page which is out of range is requested, we just returns a REST
-					// Response simulating the Empty Response.
-					if (page > 8 || page < 0) {
-						"car_brands_empty_list_response.json"
-					} else {
-						"car_brands_list_response_page_${page}.json"
-					}
-				),
-				CarBrandsResponse::class.java
+			parseCollectionFromResponse(
+				parseJSON<CarBrandsResponse>(
+					loadJSONFromAssets(
+						// Based on the JSON Responses under 'assets' we have,
+						// whenever a page which is out of range is requested, we just returns a REST
+						// Response simulating the Empty Response.
+						if (page > 8 || page < 0) {
+							"car_brands_empty_list_response.json"
+						} else {
+							"car_brands_list_response_page_${page}.json"
+						}
+					),
+					CarBrandsResponse::class.java
+				)
 			)
 		)
 	}.flowOn(Dispatchers.IO) // Perform the operation in IO Thread.
@@ -148,5 +151,44 @@ class CommonRepository(private val assetManager: AssetManager, private val moshi
 		null
 
 	}
+
+	/**
+	 * Converts the [CarBrandsResponse] to a [List] of [CarBrandCollection].
+	 *
+	 * @param response Instance of [CarBrandsResponse] we are interested in converting to.
+	 * @return [List] of [CarBrandCollection] as the converted result.
+	 */
+	private fun parseCollectionFromResponse(response: CarBrandsResponse?) =
+		LinkedList<CarBrandCollection>().apply {
+			response?.let { response ->
+
+				for (brand in response.result.brands) { // Iterate the brands from response.
+
+					add( // Add the Basic Info.
+						CarBrandCollection.BasicInfo(
+							brand.name,
+							brand.brand_image_url,
+							brand.founded,
+							brand.head_quarters
+						)
+					)
+
+					for (founder in brand.founders) { // Iterate over the founders of the brand.
+						add( // Add the Founder.
+							CarBrandCollection.Founder(founder)
+						)
+					}
+
+
+					for (car in brand.popularCars) { // Iterate over the popularCars of the brand.
+						add( // Add the Car.
+							CarBrandCollection.Car(car)
+						)
+					}
+
+				}
+
+			}
+		}
 
 }
