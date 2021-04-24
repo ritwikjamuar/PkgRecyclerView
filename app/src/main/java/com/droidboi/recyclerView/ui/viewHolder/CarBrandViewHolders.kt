@@ -5,43 +5,32 @@ import android.graphics.PorterDuffColorFilter
 
 import androidx.core.content.ContextCompat
 
-import androidx.recyclerview.widget.LinearLayoutManager
-
 import com.airbnb.lottie.LottieProperty
 
 import com.airbnb.lottie.model.KeyPath
 
 import com.droidboi.recyclerView.R
 
-import com.droidboi.recyclerView.databinding.ItemCarBrandBinding
-import com.droidboi.recyclerView.databinding.ItemCarBrandFounderBinding
-import com.droidboi.recyclerView.databinding.ItemCarBrandLoadingBinding
-import com.droidboi.recyclerView.databinding.ItemCarBrandPopularCarBinding
+import com.droidboi.recyclerView.databinding.*
 
-import com.droidboi.recyclerView.mvvm.model.CarBrand
-
-import com.droidboi.recyclerView.ui.adapter.FounderAdapter
-import com.droidboi.recyclerView.ui.adapter.PopularCarAdapter
-
-import com.droidboi.recyclerView.utility.addItems
-import com.droidboi.recyclerView.utility.initialize
+import com.droidboi.recyclerView.mvvm.model.CarBrandCollection
 
 import com.droidboi.recyclerView.viewHolder.BaseViewHolder
 
 import com.squareup.picasso.Picasso
 
 /**
- * [BaseViewHolder] to render an individual [CarBrand].
+ * [BaseViewHolder] to render the basic info of the Car Brand,
  *
- * @param binding Instance of [ItemCarBrandFounderBinding] as the View-Accessor
+ * @param binding Instance of [ItemCarBrandBasicInfoBinding] as the View-Accessor
  *   of this [BaseViewHolder].
  * @param picasso Instance of [Picasso] to facilitate the rendering of an Image over the Network.
  * @author Ritwik Jamuar
  */
-class CarBrandViewHolder(
-	binding: ItemCarBrandBinding,
-	private val picasso: Picasso,
-) : BaseViewHolder<ItemCarBrandBinding>(binding, binding.root) {
+class CarBrandBasicInfoViewHolder(
+	binding: ItemCarBrandBasicInfoBinding,
+	private val picasso: Picasso
+) : BaseViewHolder<ItemCarBrandBasicInfoBinding>(binding, binding.root) {
 
 	/*--------------------------------- BaseViewHolder Callbacks ---------------------------------*/
 
@@ -52,62 +41,22 @@ class CarBrandViewHolder(
 	/*-------------------------------------- Public Methods --------------------------------------*/
 
 	/**
-	 * Set the [CarBrand].
+	 * Sets the Basic Info of the Car Brand.
 	 *
-	 * @param brand Instance of [CarBrand] denoting the Car Brand details.
+	 * @param info Instance of [CarBrandCollection.BasicInfo] containing all the basic information.
 	 */
-	fun setCarBrand(brand: CarBrand): Unit = with(viewAccessor) {
+	fun setBasicInfo(info: CarBrandCollection.BasicInfo) = with(viewAccessor) {
 
-		valueTextCarBrandName.text = brand.name
+		valueTextCarBrandName.text = info.name
 
-		picasso.load(brand.brand_image_url)
+		picasso.load(info.imageURL)
 			.placeholder(R.drawable.ic_launcher_foreground)
 			.error(R.drawable.ic_launcher_background)
 			.into(valueImageCarBrandLogo)
 
-		valueTextCarBrandFounded.text = "${brand.founded}"
+		valueTextCarBrandFounded.text = "${info.founded}"
 
-		valueTextCarBrandHeadQuarter.text = brand.head_quarters
-
-		with(listCarBrandFounders) {
-
-			// Additional Check to ignore the re-creation of
-			// RecyclerView's Adapter and LayoutManager.
-			// This check is due to the reason that creating a Views under ViewHolder
-			// can prove costly especially when the View is complex,
-			// So we simply halt the further execution if there is already
-			if (adapter != null)
-
-			initialize(
-				FounderAdapter(),
-				LinearLayoutManager(listCarBrandFounders.context).apply {
-					initialPrefetchItemCount = brand.founders.size
-				}
-			)
-			post {
-				addItems(brand.founders, true)
-			}
-		}
-
-		with(listCarBrandPopularCars) {
-
-			// Additional Check to ignore the re-creation of
-			// RecyclerView's Adapter and LayoutManager.
-			// This check is due to the reason that creating a Views under ViewHolder
-			// can prove costly especially when the View is complex,
-			// So we simply halt the further execution if there is already
-			if (adapter != null) return
-
-			initialize(
-				PopularCarAdapter(),
-				LinearLayoutManager(listCarBrandFounders.context).apply {
-					initialPrefetchItemCount = brand.founders.size
-				}
-			)
-			post {
-				addItems(brand.popularCars, true)
-			}
-		}
+		valueTextCarBrandHeadQuarter.text = info.headQuarter
 
 	}
 
@@ -130,7 +79,10 @@ class CarBrandLoadingViewHolder(binding: ItemCarBrandLoadingBinding) :
 		LottieProperty.COLOR_FILTER,
 		{
 			PorterDuffColorFilter(
-				ContextCompat.getColor(viewAccessor.root.context, R.color.color_text_car_brand_headquarter),
+				ContextCompat.getColor(
+					viewAccessor.root.context,
+					R.color.color_text_car_brand_headquarter
+				),
 				PorterDuff.Mode.SRC_ATOP
 			)
 		}
@@ -147,7 +99,7 @@ class CarBrandLoadingViewHolder(binding: ItemCarBrandLoadingBinding) :
  *   of this [BaseViewHolder]
  * @author Ritwik Jamuar
  */
-class FounderViewHolder(
+class CarBrandFounderViewHolder(
 	binding: ItemCarBrandFounderBinding
 ) : BaseViewHolder<ItemCarBrandFounderBinding>(binding, binding.root) {
 
@@ -177,7 +129,7 @@ class FounderViewHolder(
  *   of this [BaseViewHolder]
  * @author Ritwik Jamuar
  */
-class PopularCarViewHolder(
+class CarBrandCarViewHolder(
 	binding: ItemCarBrandPopularCarBinding
 ) : BaseViewHolder<ItemCarBrandPopularCarBinding>(binding, binding.root) {
 
