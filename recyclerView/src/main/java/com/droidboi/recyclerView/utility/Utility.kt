@@ -196,3 +196,37 @@ fun RecyclerView.cleanUp() {
 	layoutManager = null // De-Reference the Layout Manager.
 	clearOnScrollListeners() // Clear all the Scroll Listeners.
 }
+
+/**
+ * Notifies an update in [item] at the given [position].
+ *
+ *
+ * NOTE: This method works only if the [RecyclerView.Adapter] in this [RecyclerView] is either an
+ * extension of the [BaseSingleVHAdapter] or [BaseMultipleVHAdapter],
+ * otherwise this method would not do anything.
+ *
+ * @param T Any Data Class.
+ * @param item Instance of [T] we want to update.
+ * @param position [Int] denoting the position at which we want to place the [item].
+ */
+@Suppress("UNCHECKED_CAST")
+fun <T> RecyclerView.notifyUpdateInAnItem(item: T, position: Int) {
+	adapter?.let { adapter ->
+
+		// Check the instance of this RecyclerView.Adapter.
+		when(adapter) {
+
+			is BaseSingleVHAdapter<*, *> -> post {
+				(adapter as? BaseSingleVHAdapter<T, *>)?.updateItemAtPosition(item, position)
+			}
+
+			is BaseMultipleVHAdapter<*> -> post {
+				(adapter as? BaseMultipleVHAdapter<T>)?.updateItemAtPosition(item, position)
+			}
+
+			else -> Unit
+
+		}
+
+	} ?: Unit
+}
