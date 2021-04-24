@@ -123,6 +123,27 @@ abstract class BaseSingleVHAdapter<
 
 	}
 
+	/**
+	 * Updates a given [item] in the [list].
+	 *
+	 * @param item Instance of [Model] which we want to replace with.
+	 * @param position [Int] denoting the Position in the [list] where we want to place this [item].
+	 */
+	fun updateItemAtPosition(item: Model, position: Int) {
+
+		// Halt the further execution if the 'position' is out of range,
+		// so that ArrayIndexOutOfBoundsException can be avoided.
+		if (position >= list.size || position < 0) return
+
+		// Replace with the 'item' at the 'position'.
+		list[position] = item
+
+		// Notify this adapter of change in the 'position'.
+		notifyItemChanged(position)
+
+	}
+
+
 	/*------------------------------------- Abstract Methods -------------------------------------*/
 
 	/**
